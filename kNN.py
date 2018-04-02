@@ -54,7 +54,6 @@ def get_article_vector(content, seg_corpus):
     :return: 文章的詞頻向量
     """
 
-	#seg_list = jieba.cut(content)
     seg_content = {}
     seg_list = jieba.analyse.extract_tags(content, topK = 100)
     for seg in seg_list:
