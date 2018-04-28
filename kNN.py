@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import jieba
 import jieba.analyse
+from snownlp import SnowNLP
 
 import math
 import json
@@ -9,7 +10,7 @@ import sys
 
 def load_news_training_data():
 	"""
-	載入ETTODAY NEWS新聞資料作為測試資料，產生訓練集向量與訓練集分類。 
+	載入ETTODAY NEWS新聞資料為測試資料，產生訓練集向量與訓練集分類。 
 	:return: 訓練集的向量及訓練集分類
 	"""
 	training_set_tf = dict()
