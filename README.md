@@ -1,7 +1,7 @@
-# KNN
+# kNN
 k-nearest neighbors algorithm
 
-### KNN Introduction:
+### kNN Introduction:
 
 ```
 最近鄰居法（KNN演算法，又譯K-近鄰演算法）是一種用於分類和回歸的無母數統計方法，KNN常用來做資料分類。
