@@ -92,7 +92,7 @@ def cosine_similarity(v1, v2):
 
 def knn_classify(input_tf, trainset_tf, trainset_class, k):
     """
-    kNN分類演算法
+    kNN分類演算法。
     :param input_tf: 輸入向量
     :param trainset_tf: 訓練集的向量
     :param trainset_class: 訓練集的分類
