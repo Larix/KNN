@@ -101,14 +101,14 @@ def knn_classify(input_tf, trainset_tf, trainset_class, k):
     """
     tf_distance = dict()
     # 計算每個訓練集合特徵關鍵字頻率向量和輸入向量的距離
-    print ('(1) 計算向量距離')
+    print ('1.計算向量距離')
     for position in trainset_tf.keys():
         tf_distance[position] = cosine_similarity(trainset_tf.get(position), input_tf)
         print ('\tDistance(%s) = %f' % (position.encode(sys.stdin.encoding, "replace").decode(sys.stdin.encoding), tf_distance.get(position)))
 
     # 取出k個最近距離的分類
     class_count = dict()
-    print ('(2) K個最近鄰居的分類, k = %d' % k)
+    print ('2.K個最近鄰居的分類, k = %d' % k)
     for i, position in enumerate(sorted(tf_distance, key=tf_distance.get, reverse=True)):
         current_class = trainset_class.get(position)
         print ('\t(%s) = %f, class = %s' % (position.encode(sys.stdin.encoding, "replace").decode(sys.stdin.encoding), tf_distance.get(position), current_class))
@@ -120,13 +120,13 @@ def knn_classify(input_tf, trainset_tf, trainset_class, k):
         if (i + 1) >= k:
             break
 
-    print ('(3) 依K個最近鄰居中出現最高頻率的作分類')
+    print ('3.依K個最近鄰居中出現最高頻率的作分類')
     input_class = ''
     for i, c in enumerate(sorted(class_count, key=class_count.get, reverse=True)):
         if i == 0:
             input_class = c
         print ('\t%s, %d' % (c, class_count.get(c)))
-    print ('(4) 分類結果 = %s' % input_class)
+    print ('4.分類結果 = %s' % input_class)
 
 if __name__ == '__main__':
 	trainset_tf, trainset_class, seg_corpus = load_news_training_data()
