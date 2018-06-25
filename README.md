@@ -1,5 +1,5 @@
-# kNN
-k-nearest neighbors algorithm
+# kNN(k-nearest neighbors algorithm)
+此專案以新聞分類進行kNN之實作
 
 ### kNN Introduction:
 
